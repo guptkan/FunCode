@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 19 22:57:21 EEST 2016 -->
+
+<report>
+  <stats>
+    <packages value="1"/>
+    <classes value="1"/>
+    <methods value="4"/>
+    <srcfiles value="1"/>
+    <srclines value="21"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="100% (1/1)"/>
+      <coverage type="method, %" value="100% (4/4)"/>
+      <coverage type="block, %" value="100% (83/83)"/>
+      <coverage type="line, %" value="100% (21/21)"/>
+
+      <package name="src_tests">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="100% (4/4)"/>
+        <coverage type="block, %" value="100% (83/83)"/>
+        <coverage type="line, %" value="100% (21/21)"/>
+      </package>
+    </all>
+  </data>
+</report>

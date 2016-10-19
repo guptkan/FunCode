@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Oct 19 06:48:38 EEST 2016 -->
+
+<report>
+  <stats>
+    <packages value="1"/>
+    <classes value="1"/>
+    <methods value="2"/>
+    <srcfiles value="1"/>
+    <srclines value="3"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="0%   (0/1)"/>
+      <coverage type="method, %" value="0%   (0/2)"/>
+      <coverage type="block, %" value="0%   (0/7)"/>
+      <coverage type="line, %" value="0%   (0/3)"/>
+
+      <package name="default package">
+        <coverage type="class, %" value="0%   (0/1)"/>
+        <coverage type="method, %" value="0%   (0/2)"/>
+        <coverage type="block, %" value="0%   (0/7)"/>
+        <coverage type="line, %" value="0%   (0/3)"/>
+
+        <srcfile name="Main.java">
+          <coverage type="class, %" value="0%   (0/1)"/>
+          <coverage type="method, %" value="0%   (0/2)"/>
+          <coverage type="block, %" value="0%   (0/7)"/>
+          <coverage type="line, %" value="0%   (0/3)"/>
+
+          <class name="Main">
+            <coverage type="class, %" value="0%   (0/1)"/>
+            <coverage type="method, %" value="0%   (0/2)"/>
+            <coverage type="block, %" value="0%   (0/7)"/>
+            <coverage type="line, %" value="0%   (0/3)"/>
+
+            <method name="Main (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/3)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="main (String []): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/4)"/>
+              <coverage type="line, %" value="0%   (0/2)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>

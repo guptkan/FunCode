@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="HELL scream" default="all" basedir=".">
+	<property name="build.sources.dir" location="${basedir}/src/com/hello"/>
+	<property name="build.sources.des" location="${basedir}/bin/classes"/>
+	<property name="test.sources.dir" location="${basedir}/src/src_tests"/>
+	<property name="test.sources.des" location="${basedir}/bin/classes_test"/>
+	<property name="test.reports.des" location="${basedir}/reports-junit"/>
+	<property name="emma.sources.des" location="${basedir}/bin/classes_emma"/>
+	<property name="emma.reports.des" location="${basedir}/reports-emma"/>
+	<property name="emma.final.reports.des" location="${basedir}/reports-emma/final"/>
+	<property name="lib.dir" value="lib" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<path id="emma.lib" >
+		<fileset dir="${lib.dir}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<taskdef resource="emma_ant.properties" classpathref="emma.lib" />
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="clean-all">
+		<delete failonerror="false">
+			<fileset dir="${emma.final.reports.des}"/>
+			<fileset dir="${emma.reports.des}"/>
+			<fileset dir="${emma.sources.des}"/>
+			<fileset dir="${test.reports.des}"/>
+			<fileset dir="${test.sources.des}"/>
+			<fileset dir="${build.sources.des}"/>
+		</delete>
+	</target>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="compile-sources">
+		<mkdir dir="${build.sources.des}"/>
+		<javac srcdir="${build.sources.dir}" includes="" excludes="" destdir="${build.sources.des}" listfiles="true" debug="true" includeantruntime="false"/>
+	</target>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="compile-tests">
+		<mkdir dir="${test.sources.des}"/>
+		<javac srcdir="${test.sources.dir}" includes="" excludes="" destdir="${test.sources.des}" listfiles="true" debug="true" includeantruntime="false">
+			<classpath>
+				<pathelement location="${lib.dir}/junit-4.10.jar"/>
+				<pathelement location="${build.sources.des}"/>
+			</classpath>
+		</javac>
+	</target>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="compile-emma-tests">
+		<emma enabled="true" >
+			<instr instrpath="${test.sources.des}" destdir="${emma.sources.des}" metadatafile ="${emma.reports.des}/instrumentation.emma" merge ="true"/>
+		</emma>
+	</target>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="run-tests">
+		<mkdir dir="${test.reports.des}"/>
+		<junit haltonfailure="no" showoutput="yes" printsummary="true">
+			<formatter type="plain" usefile="false" />
+			<formatter type="xml"/>
+			<classpath>
+				<pathelement location="${lib.dir}/junit-4.10.jar"/>
+				<pathelement location="${build.sources.des}"/>
+				<pathelement location="${emma.sources.des}"/>
+				<path refid="emma.lib" />
+			</classpath>
+
+			<batchtest todir="${test.reports.des}" fork="true">
+				<fileset dir="${emma.sources.des}"/>
+			</batchtest>
+			<jvmarg value="-XX:-UseSplitVerifier"/>
+			<jvmarg value="-Demma.coverage.out.file=${emma.reports.des}/coverage.emma" />
+			<jvmarg value="-Demma.coverage.out.merge=false" />
+		</junit>
+	</target>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="junit-tests-report">
+		<junitreport todir="${test.reports.des}">
+			<fileset dir="${test.reports.des}">
+				<include name="TEST-*.xml"/>
+			</fileset>
+
+			<report format="frames" todir="${test.reports.des}/junit_reports"/>
+		</junitreport>
+	</target>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="emma-tests-report">
+		<emma enabled="true" >
+			<report sourcepath="${build.sources.dir}">
+				<fileset dir="${emma.reports.des}" >
+					<include name="*.emma" />
+				</fileset>
+
+				<txt outfile="${emma.final.reports.des}/coverage.txt" depth="package" columns="class,method,block,line,name" />
+				<xml outfile="${emma.final.reports.des}/coverage.xml" depth="package" />
+				<html outfile="${emma.final.reports.des}/coverage.html" depth="method" columns="name,class,method,block,line" />
+			</report>
+		</emma>
+	</target>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<target name="all" depends="clean-all, compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report"/>
+</project>
