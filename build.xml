@@ -11,6 +11,8 @@
 	<property name="emma.final.reports.des" location="${basedir}/reports-emma/final"/>
 	<property name="checkstyle.dir" location="${basedir}/reports-checkstyle" />
 	<property name="lib.dir" value="lib" />
+	<property name="ant.build.javac.source" value="1.6"/>
+	<property name="ant.build.javac.target" value="1.6"/>
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<path id="emma.lib" >
 		<fileset dir="${lib.dir}">
