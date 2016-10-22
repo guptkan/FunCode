@@ -112,7 +112,7 @@
 		              failureProperty="checkstyle.failure"
 		              failOnViolation="false">
 			<formatter type="xml" tofile="checkstyle_report.xml"/>
-			<fileset dir="${build.sources.dir}" includes="**/*.java"/>
+			<fileset dir="src" includes="**/*.java"/>
 		</checkstyle>
 	</target>
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
