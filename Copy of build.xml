@@ -9,6 +9,7 @@
 	<property name="emma.sources.des" location="${basedir}/bin/classes_emma"/>
 	<property name="emma.reports.des" location="${basedir}/reports-emma"/>
 	<property name="emma.final.reports.des" location="${basedir}/reports-emma/final"/>
+	<property name="checkstyle.dir" location="${lib.dir}/checkstyle" />
 	<property name="lib.dir" value="lib" />
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<path id="emma.lib" >
@@ -18,6 +19,7 @@
 	</path>
 
 	<taskdef resource="emma_ant.properties" classpathref="emma.lib" />
+
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<target name="clean-all">
 		<delete failonerror="false">
@@ -96,6 +98,17 @@
 			</report>
 		</emma>
 	</target>
+	
+
+	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
+	         classpath="${lib.dir}/checkstyle-7.1.2-all.jar"/>
+
+	<target name="checkstyle"  description="Style linter">
+	  <checkstyle config="checkstyle.xml">
+	    <fileset dir="src" includes="**/*.java"/>
+	  </checkstyle>
+	</target>
+
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<target name="all" depends="clean-all, compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report"/>
+	<target name="all" depends="clean-all,  compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report"/>
 </project>
