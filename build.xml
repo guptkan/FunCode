@@ -116,5 +116,5 @@
 		</checkstyle>
 	</target>
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<target name="all" depends="clean-all,  compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report, checkstyle"/>
+	<target name="all" depends="clean-all,  compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report"/>
 </project>
