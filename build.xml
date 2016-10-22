@@ -104,7 +104,7 @@
 
 
 
-	<target name="checkstyle" 
+	<target name="run-checkstyle" 
 		        description="Generates a report of code convention violations."
 			>
 		<!-- See http://checkstyle.sourceforge.net/anttask.html for full options of using checkstyle with ant-->
@@ -116,5 +116,5 @@
 		</checkstyle>
 	</target>
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<target name="all" depends="clean-all,  compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report, checkstyle"/>
+	<target name="all" depends="clean-all,  compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report, run-checkstyle"/>
 </project>
