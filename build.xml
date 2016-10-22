@@ -9,7 +9,7 @@
 	<property name="emma.sources.des" location="${basedir}/bin/classes_emma"/>
 	<property name="emma.reports.des" location="${basedir}/reports-emma"/>
 	<property name="emma.final.reports.des" location="${basedir}/reports-emma/final"/>
-	<property name="checkstyle.dir" location="${lib.dir}/checkstyle" />
+	<property name="checkstyle.dir" location="${basedir}/reports-checkstyle" />
 	<property name="lib.dir" value="lib" />
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<path id="emma.lib" >
@@ -98,15 +98,16 @@
 			</report>
 		</emma>
 	</target>
-	
+
 
 	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
 	         classpath="${lib.dir}/checkstyle-6.17-all.jar"/>
 
 	<target name="checkstyle"  description="Style linter">
-	  <checkstyle config="google_checks.xml">
-	    <fileset dir="${build.sources.dir}" includes="**/*.java"/>
-	  </checkstyle>
+		<checkstyle config="google_checks.xml" failureProperty="checkstyle.failure" failOnViolation="false">
+			<formatter type="xml" tofile="${checkstyle.dir}/checkstyle_report.xml"/>
+			<fileset dir="${build.sources.dir}" includes="**/*.java"/>
+		</checkstyle>
 	</target>
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
