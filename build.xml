@@ -32,7 +32,7 @@
 		</delete>
 	</target>
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<target name="compile-sources">
+	<target name="compile-sources" depends= "checkstyle">
 		<mkdir dir="${build.sources.des}"/>
 		<javac srcdir="${build.sources.dir}" includes="" excludes="" destdir="${build.sources.des}" listfiles="true" debug="true" includeantruntime="false"/>
 	</target>
