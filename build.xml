@@ -9,6 +9,7 @@
 	<property name="emma.sources.des" location="${basedir}/bin/classes_emma"/>
 	<property name="emma.reports.des" location="${basedir}/reports-emma"/>
 	<property name="emma.final.reports.des" location="${basedir}/reports-emma/final"/>
+	<property name="checkstyle.dir" location="${lib.dir}/checkstyle" />
 	<property name="lib.dir" value="lib" />
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<path id="emma.lib" >
@@ -66,7 +67,8 @@
 			<batchtest todir="${test.reports.des}" fork="true">
 				<fileset dir="${emma.sources.des}"/>
 			</batchtest>
-			<jvmarg value="-XX:-UseSplitVerifier"/>
+			<jvmarg value="-noverify"/>
+			<!--jvmarg value="-XX:-UseSplitVerifier"-->
 			<jvmarg value="-Demma.coverage.out.file=${emma.reports.des}/coverage.emma" />
 			<jvmarg value="-Demma.coverage.out.merge=false" />
 		</junit>
@@ -95,6 +97,26 @@
 			</report>
 		</emma>
 	</target>
+
+	<path id="checkstyle.classpath">
+	  <pathelement location="lib/checkstyle-6.17-all.jar"/>
+	</path>
+
+	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties">
+	  <classpath refid="checkstyle.classpath"/>
+	</taskdef>
+
+	<target name="checkstyle" 
+		        description="Generates a report of code convention violations."
+			>
+		<!-- See http://checkstyle.sourceforge.net/anttask.html for full options of using checkstyle with ant-->
+		<checkstyle config="checkstyle.xml"
+		              failureProperty="checkstyle.failure"
+		              failOnViolation="false">
+			<formatter type="xml" tofile="checkstyle_report.xml"/>
+			<fileset dir="${build.sources.dir}" includes="**/*.java"/>
+		</checkstyle>
+	</target>
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<target name="all" depends="clean-all, compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report"/>
+	<target name="all" depends="clean-all,  compile-sources, compile-tests, compile-emma-tests, run-tests, junit-tests-report, emma-tests-report, checkstyle"/>
 </project>

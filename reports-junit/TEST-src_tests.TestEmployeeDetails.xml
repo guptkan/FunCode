@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="futurerists" name="src_tests.TestEmployeeDetails" skipped="0" tests="3" time="0.055" timestamp="2016-10-19T19:57:22">
+<testsuite errors="0" failures="0" hostname="futurerists" name="src_tests.TestEmployeeDetails" skipped="0" tests="3" time="0.062" timestamp="2016-10-22T04:49:36">
   <properties>
-    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="java.vendor" value="Oracle Corporation" />
     <property name="lib.dir" value="lib" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="eclipse.pdebuild.templates" value="/C:/Utils/eclipse/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/templates/" />
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler" />
+    <property name="checkstyle.dir" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\${lib.dir}\checkstyle" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
     <property name="build.sources.dir" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\src\com\hello" />
-    <property name="os.name" value="Windows NT (unknown)" />
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_24\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_24\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_24\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_24\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_24\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_24\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_24\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_24\jre\classes" />
+    <property name="os.name" value="Windows 8.1" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_45\lib\resources.jar;C:\Program Files\Java\jre1.8.0_45\lib\rt.jar;C:\Program Files\Java\jre1.8.0_45\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_45\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_45\lib\jce.jar;C:\Program Files\Java\jre1.8.0_45\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_45\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_45\classes" />
     <property name="sun.desktop" value="windows" />
-    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="ant.home" value="C:\Utils\ant" />
-    <property name="java.runtime.version" value="1.6.0_24-b07" />
+    <property name="java.runtime.version" value="1.8.0_45-b14" />
     <property name="user.name" value="Kanchan" />
     <property name="user.language" value="en" />
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_24\jre\bin" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_45\bin" />
     <property name="ant.project.default-target" value="all" />
     <property name="ant.project.name" value="HELL scream" />
-    <property name="java.version" value="1.6.0_24" />
+    <property name="java.version" value="1.8.0_45" />
     <property name="emma.final.reports.des" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\reports-emma\final" />
-    <property name="user.timezone" value="" />
+    <property name="user.timezone" value="Europe/Helsinki" />
     <property name="sun.arch.data.model" value="64" />
     <property name="emma.sources.des" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\bin\classes_emma" />
     <property name="emma.coverage.out.file" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\reports-emma/coverage.emma" />
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_24\jre\lib\endorsed" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_45\lib\endorsed" />
     <property name="sun.cpu.isalist" value="amd64" />
     <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="file.encoding.pkg" value="sun.io" />
     <property name="file.separator" value="\" />
     <property name="java.specification.name" value="Java Platform API Specification" />
-    <property name="java.class.version" value="50.0" />
+    <property name="java.class.version" value="52.0" />
     <property name="user.country" value="US" />
-    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_24\jre" />
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_45" />
     <property name="java.vm.info" value="mixed mode" />
     <property name="ant.file" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\build.xml" />
-    <property name="os.version" value="6.2" />
+    <property name="os.version" value="6.3" />
     <property name="path.separator" value=";" />
-    <property name="java.vm.version" value="19.1-b02" />
+    <property name="java.vm.version" value="25.45-b02" />
     <property name="user.variant" value="" />
     <property name="ant.library.dir" value="C:\Utils\ant\lib" />
     <property name="test.sources.des" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\bin\classes_test" />
@@ -45,46 +46,46 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
     <property name="emma.reports.des" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\reports-emma" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="user.script" value="" />
     <property name="eclipse.pdebuild.scripts" value="/C:/Utils/eclipse/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/scripts/" />
     <property name="user.home" value="C:\Users\Kanchan" />
     <property name="ant.file.HELL scream" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\build.xml" />
-    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_24\jre\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_45/bin/server;C:/Program Files/Java/jre1.8.0_45/bin;C:/Program Files/Java/jre1.8.0_45/lib/amd64;C:\Program Files (x86)\Python\;C:\Program Files (x86)\Python\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\TortoiseSVN\bin;%JAVA_HOME%\bin;C:\Utils\ant\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Skype\Phone\;C:\Utils\Git\cmd;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Users\Kanchan\AppData\Local\Microsoft\WindowsApps;;C:\Utils\eclipse;" />
-    <property name="java.vendor.url" value="http://java.sun.com/" />
-    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_45\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_45/bin/server;C:/Program Files/Java/jre1.8.0_45/bin;C:/Program Files/Java/jre1.8.0_45/lib/amd64;C:\Program Files (x86)\Python\;C:\Program Files (x86)\Python\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Utils\ant\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Skype\Phone\;C:\Utils\Git\cmd;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Users\Kanchan\AppData\Local\Microsoft\WindowsApps;C:\Utils\eclipse;;." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="java.class.path" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\lib\junit-4.10.jar;C:\Users\Kanchan\workspace\workspace_ant\FunCode\bin\classes;C:\Users\Kanchan\workspace\workspace_ant\FunCode\bin\classes_emma;C:\Users\Kanchan\workspace\workspace_ant\FunCode\lib\emma.jar;C:\Users\Kanchan\workspace\workspace_ant\FunCode\lib\emma_ant.jar;C:\Utils\ant\lib\ant-launcher.jar;C:\Utils\ant\lib\ant.jar;C:\Utils\ant\lib\ant-junit.jar;C:\Utils\ant\lib\ant-junit4.jar" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner src_tests.TestEmployeeDetails skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Kanchan\workspace\workspace_ant\FunCode\reports-junit\TEST-src_tests.TestEmployeeDetails.xml crashfile=C:\Users\Kanchan\workspace\workspace_ant\FunCode\junitvmwatcher7406275823065769720.properties propsfile=C:\Users\Kanchan\workspace\workspace_ant\FunCode\junit1390014888758382749.properties" />
+    <property name="java.class.path" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\lib\junit-4.10.jar;C:\Users\Kanchan\workspace\workspace_ant\FunCode\bin\classes;C:\Users\Kanchan\workspace\workspace_ant\FunCode\bin\classes_emma;C:\Users\Kanchan\workspace\workspace_ant\FunCode\lib\checkstyle-7.1.2-all.jar;C:\Users\Kanchan\workspace\workspace_ant\FunCode\lib\emma.jar;C:\Users\Kanchan\workspace\workspace_ant\FunCode\lib\emma_ant.jar;C:\Utils\ant\lib\ant-launcher.jar;C:\Utils\ant\lib\ant.jar;C:\Utils\ant\lib\ant-junit.jar;C:\Utils\ant\lib\ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
     <property name="build.sources.des" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\bin\classes" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
-    <property name="java.vm.specification.version" value="1.0" />
+    <property name="java.vm.specification.version" value="1.8" />
     <property name="test.reports.des" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\reports-junit" />
     <property name="sun.cpu.endian" value="little" />
     <property name="sun.os.patch.level" value="" />
     <property name="eclipse.pdebuild.home" value="/C:/Utils/eclipse/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/./" />
     <property name="java.io.tmpdir" value="C:\Users\Kanchan\AppData\Local\Temp\" />
-    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
     <property name="os.arch" value="amd64" />
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_24\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_45\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
     <property name="ant.file.type.HELL scream" value="file" />
     <property name="user.dir" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode" />
     <property name="emma.coverage.out.merge" value="false" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
-    <property name="org.apache.tools.ant.taskdefs.optional.junit.AggregateTransformer1" value="C:\Users\Kanchan\AppData\Local\Temp\null112497803" />
     <property name="test.sources.dir" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode\src\src_tests" />
-    <property name="org.apache.tools.ant.taskdefs.optional.junit.AggregateTransformer0" value="C:\Users\Kanchan\AppData\Local\Temp\null1793524841" />
     <property name="basedir" value="C:\Users\Kanchan\workspace\workspace_ant\FunCode" />
-    <property name="ant.java.version" value="1.6" />
+    <property name="ant.java.version" value="1.8" />
     <property name="ant.core.lib" value="C:\Utils\ant\lib\ant.jar" />
     <property name="file.encoding" value="Cp1252" />
-    <property name="java.specification.version" value="1.6" />
-    <property name="ant.project.invoked-targets" value="all,junit-tests-report,clean-all,compile-sources,compile-tests,compile-emma-tests,run-tests,emma-tests-report" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.project.invoked-targets" value="all" />
   </properties>
-  <testcase classname="src_tests.TestEmployeeDetails" name="testCalculateAppriasal" time="0.0020" />
+  <testcase classname="src_tests.TestEmployeeDetails" name="testAge" time="0.003" />
   <testcase classname="src_tests.TestEmployeeDetails" name="testCalculateYearlySalary" time="0.0" />
-  <testcase classname="src_tests.TestEmployeeDetails" name="testAge" time="0.0" />
+  <testcase classname="src_tests.TestEmployeeDetails" name="testCalculateAppriasal" time="0.0" />
   <system-out><![CDATA[EMMA: collecting runtime coverage data ...
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
